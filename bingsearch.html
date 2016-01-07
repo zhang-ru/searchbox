@@ -5,11 +5,12 @@
 	<title>Welcome to Bing</title>
 	<style>
 		body{background-color: #333;}
-		#bg	{width:1366px;height:768px;background: url(river.jpg) no-repeat; margin: 0 auto;}
-		#content{position: relative;}
-		#logo{background: url(logo.png) no-repeat; width: 128px; height: 128px; position: absolute; left: 100px; top: 500px;}
-		#searchText{height: 28px; line-height: 1.4; width: 350px;}
-		#searchButton{background: url(search-button.png); width:29px;height: 29px; float: left; border: 0;}
+		#bg	{width:1366px;height:768px;background: url(river.jpg) no-repeat; margin: 0 auto; position: relative;}
+		#content{position: absolute;left: 200px; top: 150px;}
+		#logo{background: url(logo.png) no-repeat; width: 128px; height: 128px; float: left; }
+		#bingForm{float: left; background-color: #fff; padding: 5px; }
+		#searchText{height: 25px; line-height: 25px; width: 350px; float: left; border: 0; outline: 0;}
+		#searchButton{background: url(search-button.png); width:29px;height: 29px;  border: 0; float: left; margin-left: -30px;}
 	</style>
 </head>
 <body>
@@ -18,7 +19,7 @@
 			<div id="logo"></div>
 			<form id="bingForm" action="https://cn.bing.com/search" target="_blank">
 				<input type="text" id="searchText">
-				<input type="button" id="searchButton">
+				<input type="submit" id="searchButton" value="">
 			</form>
 		</div>
 	</div>
