@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to Bing</title>
+	<style>
+		body{background-color: #333;}
+		#bg	{width:1366px;height:768px;background: url(river.jpg) no-repeat; margin: 0 auto;}
+		#content{position: relative;}
+		#logo{background: url(logo.png) no-repeat; width: 128px; height: 128px; position: absolute; left: 100px; top: 500px;}
+		#searchText{height: 28px; line-height: 1.4; width: 350px;}
+		#searchButton{background: url(search-button.png); width:29px;height: 29px; float: left; border: 0;}
+	</style>
+</head>
+<body>
+	<div id="bg">
+		<div id="content">
+			<div id="logo"></div>
+			<form id="bingForm" action="https://cn.bing.com/search" target="_blank">
+				<input type="text" id="searchText">
+				<input type="button" id="searchButton">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
