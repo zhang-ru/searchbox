@@ -32,7 +32,7 @@
 			</form>
 		</div>
 		<div id="result">
-			<ul>
+			<ul id="resultList">
 				<li>result1</li>
 				<li>result2</li>
 			</ul>
@@ -42,7 +42,14 @@
 	<script>
 	$("#searchText").bind("keyup",function(){
 		var searchText=$(this).val(); 
-		$.get('http://api.bing.com/qsonhs.aspx?q='+searchText);
+		$.get('http://api.bing.com/qsonhs.aspx?q='+searchText,function(d){
+			var r=d.AS.Results[0].Suggests;
+			var html='';
+			for(var i=0;i<=r.length;i++){
+				html+='<li>'+r[i].Txt+'</li>'
+			};
+			$("#resultList").html(html);
+		},'json');
 	});
 	$("#searchButton").click(function(){
 		$("#result").show();
